@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Lawyer Dashboard | JusticeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer Profile" class="profile-img">
+                <h3>Adv. Priya Menon</h3>
+                <p>Specialization: Family Law</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="lawyer.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="lawyer-cases.html"><i class="fas fa-list"></i> My Cases</a></li>
+                    <li><a href="lawyer-calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+                    <li><a href="lawyer-documents.html"><i class="fas fa-file-contract"></i> Documents</a></li>
+                    <li><a href="lawyer-clients.html"><i class="fas fa-users"></i> Clients</a></li>
+                    <li><a href="lawyer-messages.html"><i class="fas fa-comments"></i> Messages</a></li>
+                    <li class="active"><a href="lawyer-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h2>Settings</h2>
+                    <div class="breadcrumb">
+                        <a href="lawyer.html">Home</a> / <span>Settings</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search settings...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <div class="notifications">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">2</span>
+                            <div class="notification-dropdown">
+                                <div class="notification-item">
+                                    <p>New message from client</p>
+                                    <small>30 mins ago</small>
+                                </div>
+                                <div class="notification-item">
+                                    <p>Hearing reminder for Case #1245</p>
+                                    <small>2 hours ago</small>
+                                </div>
+                                <a href="#" class="view-all">View All Notifications</a>
+                            </div>
+                        </div>
+                        
+                        <div class="user-profile">
+                            <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Profile">
+                            <div class="profile-dropdown">
+                                <div class="profile-info">
+                                    <h4>Adv. Priya Menon</h4>
+                                    <p>Family Law Specialist</p>
+                                </div>
+                                <a href="lawyer-profile.html"><i class="fas fa-user"></i> My Profile</a>
+                                <a href="lawyer-settings.html"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="dashboard-section">
+                <div class="settings-tabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="profile">Profile</button>
+                        <button class="tab-btn" data-tab="security">Security</button>
+                        <button class="tab-btn" data-tab="notifications">Notifications</button>
+                        <button class="tab-btn" data-tab="preferences">Preferences</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="profile">
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label for="profile-pic">Profile Picture</label>
+                                <div class="profile-pic-upload">
+                                    <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Profile" id="profile-pic-preview">
+                                    <div class="upload-actions">
+                                        <input type="file" id="profile-pic" accept="image/*">
+                                        <button type="button" class="btn btn-sm">Change</button>
+                                        <button type="button" class="btn btn-sm btn-secondary">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" value="Priya">
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" value="Menon">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="priya.menon@lawfirm.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" value="+91 9876543210">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bar-number">Bar Council Number</label>
+                                <input type="text" id="bar-number" value="TN/2020/12345">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="specialization">Specialization</label>
+                                <select id="specialization">
+                                    <option value="family" selected>Family Law</option>
+                                    <option value="criminal">Criminal Law</option>
+                                    <option value="civil">Civil Law</option>
+                                    <option value="corporate">Corporate Law</option>
+                                    <option value="property">Property Law</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bio">Bio/Description</label>
+                                <textarea id="bio" rows="4">Experienced family law specialist with 10+ years of practice in divorce, child custody, and alimony cases. Committed to providing compassionate legal support.</textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Office Address</label>
+                                <textarea id="address" rows="3">24, Advocate Street, Nungambakkam, Chennai - 600034</textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="tab-content" id="security">
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label>Password</label>
+                                <div class="security-info">
+                                    <p>Last changed: 15 Oct 2023</p>
+                                    <button type="button" class="btn btn-sm btn-primary" id="change-password-btn">Change Password</button>
+                                </div>
+                            </div>
+                            
+                            <div id="password-change-form" style="display: none;">
+                                <div class="form-group">
+                                    <label for="current-password">Current Password</label>
+                                    <div class="password-input">
+                                        <input type="password" id="current-password">
+                                        <span class="toggle-password" onclick="togglePassword('current-password')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="new-password">New Password</label>
+                                    <div class="password-input">
+                                        <input type="password" id="new-password">
+                                        <span class="toggle-password" onclick="togglePassword('new-password')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                    <small class="password-hint">Must be at least 8 characters long</small>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm New Password</label>
+                                    <div class="password-input">
+                                        <input type="password" id="confirm-password">
+                                        <span class="toggle-password" onclick="togglePassword('confirm-password')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-secondary" id="cancel-password-change">Cancel</button>
+                                    <button type="button" class="btn btn-primary">Update Password</button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Two-Factor Authentication</label>
+                                <div class="security-info">
+                                    <p>Status: <span class="badge pending">Disabled</span></p>
+                                    <button type="button" class="btn btn-sm btn-primary">Enable 2FA</button>
+                                </div>
+                                <small>Add an extra layer of security to your account</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Active Sessions</label>
+                                <div class="sessions-list">
+                                    <div class="session-item">
+                                        <div class="session-info">
+                                            <i class="fas fa-desktop"></i>
+                                            <div>
+                                                <p>Windows 10, Chrome</p>
+                                                <small>Chennai, India • 15 Nov 2023, 10:30 AM</small>
+                                            </div>
+                                        </div>
+                                        <button class="btn-icon"><i class="fas fa-times"></i></button>
+                                    </div>
+                                    
+                                    <div class="session-item">
+                                        <div class="session-info">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <div>
+                                                <p>iPhone 13, Safari</p>
+                                                <small>Bangalore, India • 14 Nov 2023, 8:15 PM</small>
+                                            </div>
+                                        </div>
+                                        <button class="btn-icon"><i class="fas fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-secondary">Logout All Other Devices</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="tab-content" id="notifications">
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label>Notification Preferences</label>
+                                <div class="notification-options">
+                                    <div class="option-item">
+                                        <input type="checkbox" id="case-updates" checked>
+                                        <label for="case-updates">Case Updates</label>
+                                        <p>Receive notifications about case status changes and updates</p>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <input type="checkbox" id="hearing-reminders" checked>
+                                        <label for="hearing-reminders">Hearing Reminders</label>
+                                        <p>Get reminders for upcoming hearings and court dates</p>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <input type="checkbox" id="client-messages" checked>
+                                        <label for="client-messages">Client Messages</label>
+                                        <p>Be notified when clients send you messages</p>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <input type="checkbox" id="document-uploads">
+                                        <label for="document-uploads">Document Uploads</label>
+                                        <p>Receive alerts when new documents are uploaded to your cases</p>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <input type="checkbox" id="system-notifications" checked>
+                                        <label for="system-notifications">System Notifications</label>
+                                        <p>Important updates about the JusticeConnect platform</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Notification Methods</label>
+                                <div class="notification-methods">
+                                    <div class="method-item">
+                                        <input type="checkbox" id="email-notifications" checked>
+                                        <label for="email-notifications">Email Notifications</label>
+                                    </div>
+                                    
+                                    <div class="method-item">
+                                        <input type="checkbox" id="push-notifications" checked>
+                                        <label for="push-notifications">Push Notifications</label>
+                                    </div>
+                                    
+                                    <div class="method-item">
+                                        <input type="checkbox" id="sms-notifications">
+                                        <label for="sms-notifications">SMS Notifications</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary">Reset to Default</button>
+                                <button type="submit" class="btn btn-primary">Save Preferences</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="tab-content" id="preferences">
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label for="language">Language</label>
+                                <select id="language">
+                                    <option value="en" selected>English</option>
+                                    <option value="hi">Hindi</option>
+                                    <option value="ta">Tamil</option>
+                                    <option value="te">Telugu</option>
+                                    <option value="kn">Kannada</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timezone">Timezone</label>
+                                <select id="timezone">
+                                    <option value="IST" selected>Indian Standard Time (UTC +5:30)</option>
+                                    <option value="GMT">Greenwich Mean Time (UTC +0:00)</option>
+                                    <option value="EST">Eastern Standard Time (UTC -5:00)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="date-format">Date Format</label>
+                                <select id="date-format">
+                                    <option value="dd-mm-yyyy" selected>DD-MM-YYYY (15-11-2023)</option>
+                                    <option value="mm-dd-yyyy">MM-DD-YYYY (11-15-2023)</option>
+                                    <option value="yyyy-mm-dd">YYYY-MM-DD (2023-11-15)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Calendar Preferences</label>
+                                <div class="preference-options">
+                                    <div class="option-item">
+                                        <input type="checkbox" id="weekends" checked>
+                                        <label for="weekends">Show Weekends</label>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <input type="checkbox" id="holidays" checked>
+                                        <label for="holidays">Show Court Holidays</label>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <input type="checkbox" id="reminder-popups">
+                                        <label for="reminder-popups">Enable Reminder Popups</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Default View</label>
+                                <div class="view-options">
+                                    <div class="option-item">
+                                        <input type="radio" id="view-day" name="default-view" checked>
+                                        <label for="view-day">Day View</label>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <input type="radio" id="view-week" name="default-view">
+                                        <label for="view-week">Week View</label>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <input type="radio" id="view-month" name="default-view">
+                                        <label for="view-month">Month View</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary">Reset to Default</button>
+                                <button type="submit" class="btn btn-primary">Save Preferences</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tabId = this.dataset.tab;
+                    
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Password change toggle
+            const changePasswordBtn = document.getElementById('change-password-btn');
+            const cancelPasswordChange = document.getElementById('cancel-password-change');
+            const passwordChangeForm = document.getElementById('password-change-form');
+            
+            if (changePasswordBtn && cancelPasswordChange && passwordChangeForm) {
+                changePasswordBtn.addEventListener('click', function() {
+                    passwordChangeForm.style.display = 'block';
+                });
+                
+                cancelPasswordChange.addEventListener('click', function() {
+                    passwordChangeForm.style.display = 'none';
+                });
+            }
+            
+            // Profile picture preview
+            const profilePicInput = document.getElementById('profile-pic');
+            const profilePicPreview = document.getElementById('profile-pic-preview');
+            
+            if (profilePicInput && profilePicPreview) {
+                profilePicInput.addEventListener('change', function() {
+                    const file = this.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            profilePicPreview.src = e.target.result;
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

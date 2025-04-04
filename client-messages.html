@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - JusticeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client Profile" class="profile-img">
+                <h3>Suresh Kumar</h3>
+                <p>Client ID: CL10045</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="client.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="client-cases.html"><i class="fas fa-list"></i> My Cases</a></li>
+                    <li><a href="client-hearings.html"><i class="fas fa-calendar"></i> Hearings</a></li>
+                    <li><a href="client-documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                    <li class="active"><a href="client-messages.html"><i class="fas fa-comments"></i> Messages</a></li>
+                    <li><a href="client-profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h2>Messages</h2>
+                    <div class="breadcrumb">
+                        <a href="client.html">Home</a> / <span>Messages</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search messages...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <div class="notifications">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">1</span>
+                            <div class="notification-dropdown">
+                                <div class="notification-item">
+                                    <p>New message from your lawyer</p>
+                                    <small>2 hours ago</small>
+                                </div>
+                                <a href="#" class="view-all">View All Notifications</a>
+                            </div>
+                        </div>
+                        
+                        <div class="user-profile">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Profile">
+                            <div class="profile-dropdown">
+                                <div class="profile-info">
+                                    <h4>Suresh Kumar</h4>
+                                    <p>Client ID: CL10045</p>
+                                </div>
+                                <a href="client-profile.html"><i class="fas fa-user"></i> My Profile</a>
+                                <a href="client-settings.html"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h3>All Conversations</h3>
+                    <div class="section-actions">
+                        <button class="btn btn-sm btn-primary">New Message</button>
+                    </div>
+                </div>
+                
+                <div class="messages-container">
+                    <div class="messages-sidebar">
+                        <div class="messages-search">
+                            <input type="text" placeholder="Search conversations...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="messages-list">
+                            <div class="message-item active">
+                                <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer">
+                                <div class="message-info">
+                                    <h4>Adv. Priya Menon</h4>
+                                    <p>Regarding HCAP/2023/1245</p>
+                                    <small>2 hours ago</small>
+                                    <span class="badge">2</span>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <img src="https://www.behindwoods.com/tamil-movies/slideshow/suriya-bday-special-the-10-suriya-makeovers/images/8-the-singam-inspector.jpg" alt="Police">
+                                <div class="message-info">
+                                    <h4>Inspector Singam</h4>
+                                    <p>About FIR status</p>
+                                    <small>Yesterday</small>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToZV_ahEJ1Z-qA-CoDRvp7eAkfJzarU2vn4A&s" alt="Court">
+                                <div class="message-info">
+                                    <h4>Court Clerk</h4>
+                                    <p>Document submission</p>
+                                    <small>3 days ago</small>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client">
+                                <div class="message-info">
+                                    <h4>Anita Reddy</h4>
+                                    <p>About joint property</p>
+                                    <small>1 week ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messages-content">
+                        <div class="messages-header">
+                            <div class="recipient-info">
+                                <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer">
+                                <div>
+                                    <h4>Adv. Priya Menon</h4>
+                                    <p>Online</p>
+                                </div>
+                            </div>
+                            <div class="message-actions">
+                                <button class="btn-icon"><i class="fas fa-phone"></i></button>
+                                <button class="btn-icon"><i class="fas fa-video"></i></button>
+                                <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                        </div>
+                        <div class="messages-body">
+                            <div class="message received">
+                                <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer">
+                                <div class="message-content">
+                                    <p>Hello Suresh, I hope you're doing well. I wanted to update you on your divorce case.</p>
+                                    <small>10:15 AM</small>
+                                </div>
+                            </div>
+                            <div class="message received">
+                                <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer">
+                                <div class="message-content">
+                                    <p>The court has scheduled the next hearing for November 15th at 10:30 AM.</p>
+                                    <small>10:16 AM</small>
+                                </div>
+                            </div>
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <p>Thank you for the update. What documents do I need to bring for the hearing?</p>
+                                    <small>10:17 AM</small>
+                                </div>
+                            </div>
+                            <div class="message received">
+                                <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer">
+                                <div class="message-content">
+                                    <p>Please bring your ID proof, original marriage certificate, and any evidence of financial transactions between you and your spouse.</p>
+                                    <small>10:18 AM</small>
+                                </div>
+                            </div>
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <p>I'll gather all those documents. Should I bring copies as well?</p>
+                                    <small>10:20 AM</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages-input">
+                            <div class="input-actions">
+                                <button class="btn-icon"><i class="fas fa-paperclip"></i></button>
+                                <button class="btn-icon"><i class="fas fa-image"></i></button>
+                            </div>
+                            <input type="text" placeholder="Type your message...">
+                            <button class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <h4>Messages</h4>
+            <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-sidebar">
+                <div class="chat-search">
+                    <input type="text" placeholder="Search messages...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="chat-list">
+                    <div class="chat-item active">
+                        <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer">
+                        <div class="chat-info">
+                            <h5>Adv. Priya Menon</h5>
+                            <p>Regarding HCAP/2023/1245</p>
+                            <small>2 hours ago</small>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <img src="https://www.behindwoods.com/tamil-movies/slideshow/suriya-bday-special-the-10-suriya-makeovers/images/8-the-singam-inspector.jpg" alt="Police">
+                        <div class="chat-info">
+                            <h5>Inspector Singam</h5>
+                            <p>About FIR status</p>
+                            <small>Yesterday</small>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToZV_ahEJ1Z-qA-CoDRvp7eAkfJzarU2vn4A&s" alt="Court">
+                        <div class="chat-info">
+                            <h5>Court Clerk</h5>
+                            <p>Document submission</p>
+                            <small>3 days ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-messages">
+                <div class="chat-conversation">
+                    <div class="message received">
+                        <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer">
+                        <div class="message-content">
+                            <p>Suresh, I wanted to remind you about the hearing tomorrow at 10:30 AM.</p>
+                            <small>10:15 AM</small>
+                        </div>
+                    </div>
+                    <div class="message sent">
+                        <div class="message-content">
+                            <p>Yes, I'll be there. What documents should I bring?</p>
+                            <small>10:16 AM</small>
+                        </div>
+                    </div>
+                    <div class="message received">
+                        <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer">
+                        <div class="message-content">
+                            <p>Please bring your ID proof and any original documents related to the case.</p>
+                            <small>10:17 AM</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message...">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="chat-toggle">
+        <i class="fas fa-comments"></i>
+        <span class="badge">1</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

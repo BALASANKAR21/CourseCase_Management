@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File a Case - JusticeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-balance-scale"></i>
+                <h1>JusticeConnect</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="case-register.html" class="active">File a Case</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="case-form-container">
+            <div class="form-header">
+                <h2>File a New Case</h2>
+                <p>Fill out the form below to register your case with the court system</p>
+            </div>
+            
+            <div class="form-steps">
+                <div class="step active" data-step="1">
+                    <span>1</span>
+                    <p>Basic Information</p>
+                </div>
+                <div class="step" data-step="2">
+                    <span>2</span>
+                    <p>Case Details</p>
+                </div>
+                <div class="step" data-step="3">
+                    <span>3</span>
+                    <p>Review & Submit</p>
+                </div>
+            </div>
+            
+            <form id="caseForm">
+                <div class="form-step active" id="step1">
+                    <h3>Basic Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="caseTitle">Case Title</label>
+                            <input type="text" id="caseTitle" name="caseTitle" placeholder="e.g., State vs. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="caseCategory">Case Category</label>
+                            <select id="caseCategory" name="caseCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="criminal">Criminal</option>
+                                <option value="civil">Civil</option>
+                                <option value="family">Family</option>
+                                <option value="property">Property</option>
+                                <option value="corporate">Corporate</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="caseDescription">Case Description</label>
+                        <textarea id="caseDescription" name="caseDescription" rows="5" placeholder="Provide a detailed description of the case..." required></textarea>
+                        <div class="ai-suggestion" id="aiSuggestion">
+                            <p>AI Suggestion: <span id="aiSuggestedCategory">No suggestion yet</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" disabled>Previous</button>
+                        <button type="button" class="btn btn-primary next-step">Next</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" id="step2">
+                    <h3>Party Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="complainantName">Complainant Name</label>
+                            <input type="text" id="complainantName" name="complainantName" placeholder="Enter complainant name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="respondentName">Respondent Name</label>
+                            <input type="text" id="respondentName" name="respondentName" placeholder="Enter respondent name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="complainantContact">Complainant Contact</label>
+                            <input type="text" id="complainantContact" name="complainantContact" placeholder="Phone or email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="respondentContact">Respondent Contact</label>
+                            <input type="text" id="respondentContact" name="respondentContact" placeholder="Phone or email">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="incidentDate">Incident Date</label>
+                        <input type="date" id="incidentDate" name="incidentDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="incidentLocation">Incident Location</label>
+                        <input type="text" id="incidentLocation" name="incidentLocation" placeholder="Where did the incident occur?" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                        <button type="button" class="btn btn-primary next-step">Next</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" id="step3">
+                    <h3>Review & Submit</h3>
+                    
+                    <div class="review-section">
+                        <div class="review-item">
+                            <h4>Case Information</h4>
+                            <p><strong>Title:</strong> <span id="reviewCaseTitle"></span></p>
+                            <p><strong>Category:</strong> <span id="reviewCaseCategory"></span></p>
+                            <p><strong>Description:</strong> <span id="reviewCaseDescription"></span></p>
+                        </div>
+                        
+                        <div class="review-item">
+                            <h4>Party Information</h4>
+                            <p><strong>Complainant:</strong> <span id="reviewComplainant"></span></p>
+                            <p><strong>Respondent:</strong> <span id="reviewRespondent"></span></p>
+                            <p><strong>Incident Date:</strong> <span id="reviewIncidentDate"></span></p>
+                            <p><strong>Location:</strong> <span id="reviewLocation"></span></p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="documents">Upload Supporting Documents</label>
+                            <input type="file" id="documents" name="documents" multiple>
+                            <small>You can upload FIR, medical reports, photographs, etc. (Max 10MB)</small>
+                        </div>
+                        
+                        <div class="form-group terms">
+                            <input type="checkbox" id="declaration" name="declaration" required>
+                            <label for="declaration">I declare that the information provided is true to the best of my knowledge.</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                        <button type="submit" class="btn btn-primary">Submit Case</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 JusticeConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

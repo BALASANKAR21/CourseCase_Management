@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Lawyer Dashboard - JusticeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer Profile" class="profile-img">
+                <h3>Adv. Priya Menon</h3>
+                <p>Specialization: Family Law</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="lawyer.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="lawyer-cases.html"><i class="fas fa-list"></i> My Cases</a></li>
+                    <li><a href="lawyer-calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+                    <li><a href="lawyer-documents.html"><i class="fas fa-file-contract"></i> Documents</a></li>
+                    <li><a href="lawyer-clients.html"><i class="fas fa-users"></i> Clients</a></li>
+                    <li class="active"><a href="lawyer-messages.html"><i class="fas fa-comments"></i> Messages</a></li>
+                    <li><a href="lawyer-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h2>Messages</h2>
+                    <div class="breadcrumb">
+                        <a href="lawyer.html">Home</a> / <span>Messages</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search messages...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <div class="notifications">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">2</span>
+                            <div class="notification-dropdown">
+                                <div class="notification-item">
+                                    <p>New message from client</p>
+                                    <small>30 mins ago</small>
+                                </div>
+                                <div class="notification-item">
+                                    <p>Hearing reminder for Case #1245</p>
+                                    <small>2 hours ago</small>
+                                </div>
+                                <a href="#" class="view-all">View All Notifications</a>
+                            </div>
+                        </div>
+                        
+                        <div class="user-profile">
+                            <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Profile">
+                            <div class="profile-dropdown">
+                                <div class="profile-info">
+                                    <h4>Adv. Priya Menon</h4>
+                                    <p>Family Law Specialist</p>
+                                </div>
+                                <a href="lawyer-profile.html"><i class="fas fa-user"></i> My Profile</a>
+                                <a href="lawyer-settings.html"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="messages-container">
+                <div class="messages-sidebar">
+                    <div class="messages-search">
+                        <input type="text" placeholder="Search conversations...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="messages-list">
+                        <div class="message-item active">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client">
+                            <div class="message-info">
+                                <h4>Suresh Kumar</h4>
+                                <p>Regarding HCAP/2023/1245</p>
+                                <small>30 mins ago</small>
+                                <span class="badge">2</span>
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToZV_ahEJ1Z-qA-CoDRvp7eAkfJzarU2vn4A&s" alt="Judge">
+                            <div class="message-info">
+                                <h4>Justice Venkatesh</h4>
+                                <p>About tomorrow's hearing</p>
+                                <small>2 hours ago</small>
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <img src="https://www.behindwoods.com/tamil-movies/slideshow/suriya-bday-special-the-10-suriya-makeovers/images/8-the-singam-inspector.jpg" alt="Police">
+                            <div class="message-info">
+                                <h4>Inspector Singam</h4>
+                                <p>FIR documents</p>
+                                <small>Yesterday</small>
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
+                            <div class="message-info">
+                                <h4>Anita Reddy</h4>
+                                <p>Child custody case update</p>
+                                <small>2 days ago</small>
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Client">
+                            <div class="message-info">
+                                <h4>Priya Sharma</h4>
+                                <p>Alimony payment query</p>
+                                <small>3 days ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="messages-content">
+                    <div class="messages-header">
+                        <div class="recipient-info">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client">
+                            <div>
+                                <h4>Suresh Kumar</h4>
+                                <p>Regarding HCAP/2023/1245</p>
+                            </div>
+                        </div>
+                        <div class="message-actions">
+                            <button class="btn-icon"><i class="fas fa-phone"></i></button>
+                            <button class="btn-icon"><i class="fas fa-video"></i></button>
+                            <button class="btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    <div class="messages-conversation">
+                        <div class="message-date">
+                            <span>Today</span>
+                        </div>
+                        <div class="message received">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client">
+                            <div class="message-content">
+                                <p>Advocate, I have some questions about the hearing scheduled for tomorrow.</p>
+                                <small>10:45 AM</small>
+                            </div>
+                        </div>
+                        <div class="message sent">
+                            <div class="message-content">
+                                <p>Hello Suresh, what would you like to know?</p>
+                                <small>10:46 AM</small>
+                            </div>
+                        </div>
+                        <div class="message received">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client">
+                            <div class="message-content">
+                                <p>What documents do I need to bring with me? And what time should I arrive?</p>
+                                <small>10:47 AM</small>
+                            </div>
+                        </div>
+                        <div class="message sent">
+                            <div class="message-content">
+                                <p>Please bring your ID proof, marriage certificate, and any other documents we discussed. Arrive by 10:00 AM.</p>
+                                <small>10:48 AM</small>
+                            </div>
+                        </div>
+                        <div class="message received">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client">
+                            <div class="message-content">
+                                <p>Thank you, Advocate. I'll be there on time.</p>
+                                <small>10:49 AM</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messages-input">
+                        <div class="input-actions">
+                            <button class="btn-icon"><i class="fas fa-paperclip"></i></button>
+                            <button class="btn-icon"><i class="fas fa-image"></i></button>
+                        </div>
+                        <input type="text" placeholder="Type your message...">
+                        <button class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

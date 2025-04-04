@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cases - Lawyer Dashboard - JusticeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Lawyer Profile" class="profile-img">
+                <h3>Adv. Priya Menon</h3>
+                <p>Specialization: Family Law</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="lawyer.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li class="active"><a href="lawyer-cases.html"><i class="fas fa-list"></i> My Cases</a></li>
+                    <li><a href="lawyer-calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+                    <li><a href="lawyer-documents.html"><i class="fas fa-file-contract"></i> Documents</a></li>
+                    <li><a href="lawyer-clients.html"><i class="fas fa-users"></i> Clients</a></li>
+                    <li><a href="lawyer-messages.html"><i class="fas fa-comments"></i> Messages</a></li>
+                    <li><a href="lawyer-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h2>My Cases</h2>
+                    <div class="breadcrumb">
+                        <a href="lawyer.html">Home</a> / <span>My Cases</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search cases...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <div class="notifications">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">2</span>
+                            <div class="notification-dropdown">
+                                <div class="notification-item">
+                                    <p>New message from client</p>
+                                    <small>30 mins ago</small>
+                                </div>
+                                <div class="notification-item">
+                                    <p>Hearing reminder for Case #1245</p>
+                                    <small>2 hours ago</small>
+                                </div>
+                                <a href="#" class="view-all">View All Notifications</a>
+                            </div>
+                        </div>
+                        
+                        <div class="user-profile">
+                            <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Profile">
+                            <div class="profile-dropdown">
+                                <div class="profile-info">
+                                    <h4>Adv. Priya Menon</h4>
+                                    <p>Family Law Specialist</p>
+                                </div>
+                                <a href="lawyer-profile.html"><i class="fas fa-user"></i> My Profile</a>
+                                <a href="lawyer-settings.html"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="caseStatus">Status:</label>
+                    <select id="caseStatus">
+                        <option value="all">All Cases</option>
+                        <option value="active">Active</option>
+                        <option value="pending">Pending</option>
+                        <option value="closed">Closed</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="caseCategory">Category:</label>
+                    <select id="caseCategory">
+                        <option value="all">All Categories</option>
+                        <option value="family">Family</option>
+                        <option value="criminal">Criminal</option>
+                        <option value="civil">Civil</option>
+                        <option value="property">Property</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="dateRange">Date Range:</label>
+                    <input type="date" id="dateRange">
+                </div>
+                <button class="btn btn-primary">Apply Filters</button>
+                <button class="btn btn-secondary">Reset</button>
+                <button class="btn btn-primary"><i class="fas fa-plus"></i> Add New Case</button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="cases-table">
+                    <thead>
+                        <tr>
+                            <th>Case No.</th>
+                            <th>Title</th>
+                            <th>Client</th>
+                            <th>Category</th>
+                            <th>Next Hearing</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HCAP/2023/1245</td>
+                            <td>Divorce Case</td>
+                            <td>Suresh Kumar</td>
+                            <td><span class="badge family">Family</span></td>
+                            <td>15 Nov 2023, 10:30 AM</td>
+                            <td>Active</td>
+                            <td>
+                                <button class="btn-icon view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon message-btn"><i class="fas fa-comment"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HCAP/2023/1342</td>
+                            <td>Child Custody</td>
+                            <td>Anita Reddy</td>
+                            <td><span class="badge family">Family</span></td>
+                            <td>18 Nov 2023, 2:15 PM</td>
+                            <td>Active</td>
+                            <td>
+                                <button class="btn-icon view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon message-btn"><i class="fas fa-comment"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HCAP/2023/1421</td>
+                            <td>Alimony Case</td>
+                            <td>Priya Sharma</td>
+                            <td><span class="badge family">Family</span></td>
+                            <td>20 Nov 2023, 11:00 AM</td>
+                            <td>Pending</td>
+                            <td>
+                                <button class="btn-icon view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon message-btn"><i class="fas fa-comment"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HCAP/2023/1567</td>
+                            <td>Domestic Violence</td>
+                            <td>Meena Devi</td>
+                            <td><span class="badge family">Family</span></td>
+                            <td>22 Nov 2023, 3:30 PM</td>
+                            <td>Active</td>
+                            <td>
+                                <button class="btn-icon view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon message-btn"><i class="fas fa-comment"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HCAP/2023/1678</td>
+                            <td>Maintenance Case</td>
+                            <td>Rajesh Iyer</td>
+                            <td><span class="badge family">Family</span></td>
+                            <td>25 Nov 2023, 10:00 AM</td>
+                            <td>Pending</td>
+                            <td>
+                                <button class="btn-icon view-btn"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon message-btn"><i class="fas fa-comment"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="btn btn-secondary" disabled>Previous</button>
+                <button class="btn btn-primary active">1</button>
+                <button class="btn btn-primary">2</button>
+                <button class="btn btn-primary">3</button>
+                <button class="btn btn-secondary">Next</button>
+            </div>
+        </main>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <h4>Messages</h4>
+            <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-sidebar">
+                <div class="chat-search">
+                    <input type="text" placeholder="Search messages...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="chat-list">
+                    <div class="chat-item active">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client">
+                        <div class="chat-info">
+                            <h5>Suresh Kumar</h5>
+                            <p>Regarding HCAP/2023/1245</p>
+                            <small>30 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToZV_ahEJ1Z-qA-CoDRvp7eAkfJzarU2vn4A&s" alt="Judge">
+                        <div class="chat-info">
+                            <h5>Justice Venkatesh</h5>
+                            <p>About tomorrow's hearing</p>
+                            <small>2 hours ago</small>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <img src="https://www.behindwoods.com/tamil-movies/slideshow/suriya-bday-special-the-10-suriya-makeovers/images/8-the-singam-inspector.jpg" alt="Police">
+                        <div class="chat-info">
+                            <h5>Inspector Singam</h5>
+                            <p>FIR documents</p>
+                            <small>Yesterday</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-messages">
+                <div class="chat-conversation">
+                    <div class="message received">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client">
+                        <div class="message-content">
+                            <p>Advocate, I have some questions about the hearing scheduled for tomorrow.</p>
+                            <small>10:45 AM</small>
+                        </div>
+                    </div>
+                    <div class="message sent">
+                        <div class="message-content">
+                            <p>Hello Suresh, what would you like to know?</p>
+                            <small>10:46 AM</small>
+                        </div>
+                    </div>
+                    <div class="message received">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client">
+                        <div class="message-content">
+                            <p>What documents do I need to bring with me? And what time should I arrive?</p>
+                            <small>10:47 AM</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message...">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="chat-toggle">
+        <i class="fas fa-comments"></i>
+        <span class="badge">2</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

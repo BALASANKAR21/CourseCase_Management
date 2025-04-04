@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File FIR - JusticeConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://www.behindwoods.com/tamil-movies/slideshow/suriya-bday-special-the-10-suriya-makeovers/images/8-the-singam-inspector.jpg" alt="Police Profile" class="profile-img">
+                <h3>Inspector Singam</h3>
+                <p>Madurai Police Station</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="police.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="police-cases.html"><i class="fas fa-list"></i> All Cases</a></li>
+                    <li class="active"><a href="police-fir.html"><i class="fas fa-file-upload"></i> File FIR</a></li>
+                    <li><a href="police-reports.html"><i class="fas fa-chart-bar"></i> Reports</a></li>
+                    <li><a href="police-messages.html"><i class="fas fa-comments"></i> Messages</a></li>
+                    <li><a href="police-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h2>File FIR</h2>
+                    <div class="breadcrumb">
+                        <a href="police.html">Home</a> / <span>File FIR</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <div class="notifications">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">5</span>
+                            <div class="notification-dropdown">
+                                <div class="notification-item">
+                                    <p>New case assigned to you</p>
+                                    <small>15 mins ago</small>
+                                </div>
+                                <div class="notification-item">
+                                    <p>Judge request for FIR update</p>
+                                    <small>1 hour ago</small>
+                                </div>
+                                <div class="notification-item">
+                                    <p>3 new messages from lawyers</p>
+                                    <small>3 hours ago</small>
+                                </div>
+                                <a href="#" class="view-all">View All Notifications</a>
+                            </div>
+                        </div>
+                        
+                        <div class="user-profile">
+                            <img src="https://www.behindwoods.com/tamil-movies/slideshow/suriya-bday-special-the-10-suriya-makeovers/images/8-the-singam-inspector.jpg" alt="Profile">
+                            <div class="profile-dropdown">
+                                <div class="profile-info">
+                                    <h4>Inspector Singam</h4>
+                                    <p>Madurai Police Station</p>
+                                </div>
+                                <a href="police-profile.html"><i class="fas fa-user"></i> My Profile</a>
+                                <a href="police-settings.html"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h3>FIR Registration Form</h3>
+                </div>
+                
+                <form class="fir-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firType">FIR Type</label>
+                            <select id="firType" required>
+                                <option value="">Select FIR Type</option>
+                                <option value="theft">Theft</option>
+                                <option value="assault">Assault</option>
+                                <option value="fraud">Fraud</option>
+                                <option value="domestic">Domestic Violence</option>
+                                <option value="property">Property Dispute</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="firNumber">FIR Number</label>
+                            <input type="text" id="firNumber" value="FIR-XXXX/23" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="complainantName">Complainant Name</label>
+                        <input type="text" id="complainantName" placeholder="Enter complainant's full name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="complainantContact">Contact Number</label>
+                            <input type="tel" id="complainantContact" placeholder="Enter contact number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="complainantId">ID Proof</label>
+                            <select id="complainantId" required>
+                                <option value="">Select ID Type</option>
+                                <option value="aadhar">Aadhar Card</option>
+                                <option value="voter">Voter ID</option>
+                                <option value="pan">PAN Card</option>
+                                <option value="dl">Driving License</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="complainantAddress">Complainant Address</label>
+                        <textarea id="complainantAddress" rows="3" placeholder="Enter full address" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="incidentDetails">Incident Details</label>
+                        <textarea id="incidentDetails" rows="5" placeholder="Describe the incident in detail" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="incidentDate">Incident Date & Time</label>
+                            <input type="datetime-local" id="incidentDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="incidentLocation">Incident Location</label>
+                            <input type="text" id="incidentLocation" placeholder="Enter location" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="suspectDetails">Suspect Details (if any)</label>
+                        <textarea id="suspectDetails" rows="3" placeholder="Describe the suspect(s) if known"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="witnessDetails">Witness Details (if any)</label>
+                        <textarea id="witnessDetails" rows="3" placeholder="Provide witness names and contact details"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="evidence">Evidence Upload</label>
+                        <input type="file" id="evidence" multiple>
+                        <small>Upload photos, videos, or documents related to the case (Max 10MB each)</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="investigatingOfficer">Investigating Officer</label>
+                        <input type="text" id="investigatingOfficer" value="Inspector Singam" readonly>
+                    </div>
+                    
+                    <div class="form-group terms">
+                        <input type="checkbox" id="declaration" required>
+                        <label for="declaration">I declare that the information provided is true to the best of my knowledge and belief.</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                        <button type="submit" class="btn btn-primary">Submit FIR</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <h4>Messages</h4>
+            <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-sidebar">
+                <div class="chat-search">
+                    <input type="text" placeholder="Search messages...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="chat-list">
+                    <div class="chat-item active">
+                        <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Advocate">
+                        <div class="chat-info">
+                            <h5>Adv. Priya Menon</h5>
+                            <p>Regarding FIR-1342/23</p>
+                            <small>15 mins ago</small>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToZV_ahEJ1Z-qA-CoDRvp7eAkfJzarU2vn4A&s" alt="Judge">
+                        <div class="chat-info">
+                            <h5>Justice Venkatesh</h5>
+                            <p>Request for FIR update</p>
+                            <small>1 hour ago</small>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-9-tk8gqlU6WQXI56RuIzeRkuR6NqB_Lcag&s" alt="Client">
+                        <div class="chat-info">
+                            <h5>Suresh Kumar</h5>
+                            <p>About theft case</p>
+                            <small>3 hours ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-messages">
+                <div class="chat-conversation">
+                    <div class="message received">
+                        <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Advocate">
+                        <div class="message-content">
+                            <p>Inspector, I'm representing the complainant in FIR-1342/23. Could you provide an update on the investigation?</p>
+                            <small>11:15 AM</small>
+                        </div>
+                    </div>
+                    <div class="message sent">
+                        <div class="message-content">
+                            <p>Yes Advocate, we're currently interviewing witnesses and expect to file charges by next week.</p>
+                            <small>11:17 AM</small>
+                        </div>
+                    </div>
+                    <div class="message received">
+                        <img src="https://aambar.wordpress.com/wp-content/uploads/2020/05/ponmagal-vandhal-tamil-film-pics-hd-1.jpg" alt="Advocate">
+                        <div class="message-content">
+                            <p>Thank you. My client would like to know if they need to come to the station for any further statements.</p>
+                            <small>11:18 AM</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message...">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="chat-toggle">
+        <i class="fas fa-comments"></i>
+        <span class="badge">3</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
